@@ -7,6 +7,6 @@ workers_dev = true
 compatibility_date = "2021-12-19"
 
 [build]
-command = "pnpm install && pnpm build"
+command = "npm install && npm run build"
 [build.upload]
 format = "service-worker"
