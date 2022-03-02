@@ -4,8 +4,7 @@
   "description": "Cloudflare worker for notion",
   "main": "dist/worker.js",
   "scripts": {
-    "build": "webpack",
-    "test": "jest"
+    "build": "webpack"
   },
   "author": "CaptainOfPhB",
   "license": "MIT",
