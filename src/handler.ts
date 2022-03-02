@@ -1,3 +1,4 @@
+// import slugs from './slugs.json';
 import config from './config.json';
 
 const SLUG_TO_PAGE: Record<string, string> = {
@@ -216,7 +217,7 @@ class BodyRewriter {
   }
 }
 
-async function handleHTML(response: Response, SLUG_TO_PAGE: Record<string, string>) {
+function handleHTML(response: Response, SLUG_TO_PAGE: Record<string, string>) {
   return new HTMLRewriter()
     .on('head', new HeadRewriter())
     .on('body', new BodyRewriter(SLUG_TO_PAGE))
