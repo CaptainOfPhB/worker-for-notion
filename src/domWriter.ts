@@ -15,9 +15,16 @@ class HeadRewriter {
         .concat(`<style>* { font-family: ${fontFamily}, monospace, sans-serif !important; }</style>`)
         .concat(`
           <style>
+            div#notion-app { letter-spacing: 1px; }
             div.notion-topbar > div > :not(div:first-child) { display: none !important; }
             div.notion-topbar-mobile > div[role="button"] { display: none !important; }
             div.notion-topbar-mobile > div[role="button"] { display: none !important; }
+            div.notion-topbar > div.notranslate { font-size: 16px !important; }
+            div.notion-topbar > div.notranslate > div.notion-focusable { font-size: 16px !important; }
+            div.notion-page-content { font-size: 18px !important; }
+            div.notion-page-content a.notion-link-token { font-size: 16px !important; }
+            div.notion-page-content span.notion-enable-hover { font-size: 16px !important; }
+            div.notion-page-content div.notion-code-block > div { font-size: 16px !important; }
           </style>
         `)
         .join('')
