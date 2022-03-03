@@ -22,7 +22,7 @@ class HeadRewriter {
             div.notion-topbar div.notion-focusable { font-size: 16px !important; }
             div.notion-page-content { font-size: 18px !important; }
             div.notion-page-content a.notion-link-token { font-size: 18px !important; }
-            div.notion-page-content span.notion-enable-hover { font-size: 16px !important; }
+            div.notion-page-content span.notion-enable-hover { font-size: 18px !important; }
             div.notion-page-content div.notion-code-block > div { font-size: 16px !important; }
           </style>
         `)
