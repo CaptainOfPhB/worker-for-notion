@@ -1,7 +1,7 @@
 {
   "domain": "daijiangtao.site",
-  "googleFonts": [
-    "JetBrains Mono",
-    "Noto Serif SC"
+  "fonts": [
+    "LXGWWenKaiMono",
+    "LXGWWenKai"
   ]
 }
