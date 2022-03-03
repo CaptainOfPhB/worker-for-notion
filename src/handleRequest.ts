@@ -58,7 +58,7 @@ export async function handleRequest(request: Request): Promise<Response> {
     return response;
   }
 
-  const slug = url.pathname.slice(1);
+  const slug = url.pathname.slice(1) || 'default';
   if (slugs.includes(slug)) {
     const pageId = mapping[slug as keyof typeof mapping];
     return Response.redirect('https://' + config.domain + '/' + pageId, 301);
