@@ -2,32 +2,14 @@ import config from './config.json';
 
 class HeadRewriter {
   element(element: Element) {
-    const fontFamily = config.fonts.join(',');
-    const fontLinks = config.fonts.map(font => (
-      `
-        <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/satouriko/LxgwWenKai_Webfonts@v1.101/dist/${font}-Regular.css'>
-        <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/satouriko/LxgwWenKai_Webfonts@v1.101/dist/${font}-Bold.css'>
-      `
-    ));
-
     element.append(
-      fontLinks
-        .concat(`<style>* { font-family: ${fontFamily}, monospace, sans-serif !important; }</style>`)
-        .concat(`
-          <style>
-            div#notion-app { letter-spacing: 1px; }
-            div.notion-topbar > div > :not(div:first-child) { display: none !important; }
-            div.notion-topbar-mobile > div[role="button"] { display: none !important; }
-            div.notion-topbar-mobile > div[role="button"] { display: none !important; }
-            div.notion-topbar div.notion-focusable { font-size: 16px !important; }
-            div.notion-page-content { font-size: 18px !important; }
-            div.notion-page-content a.notion-link-token { font-size: 18px !important; }
-            div.notion-page-content span.notion-enable-hover { font-size: 18px !important; }
-            div.notion-page-content div.notion-code-block > div { font-size: 16px !important; }
-          </style>
-        `)
-        .join('')
-      ,
+     `
+        <style>
+          div.notion-topbar > div > :not(div:first-child) { display: none !important; }
+          div.notion-topbar-mobile > div[role="button"] { display: none !important; }
+          div.notion-topbar-mobile > div[role="button"] { display: none !important; }
+        </style>
+      `,
       { html: true },
     );
   }
